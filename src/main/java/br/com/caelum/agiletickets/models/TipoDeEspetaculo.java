@@ -42,7 +42,7 @@ public enum TipoDeEspetaculo {
 			 }
 				 
 			if(duracao > duracaoMinimaParaAumentoDePreco){
-				precoIntermediario = precoIntermediario.add(precoIntermediario.multiply(BigDecimal.valueOf(fatorDeAjustePorDuracao)));
+				precoIntermediario = precoIntermediario.add(precoPadrao.multiply(BigDecimal.valueOf(fatorDeAjustePorDuracao)));
 			}
 			return precoIntermediario;
 		}
@@ -60,7 +60,7 @@ public enum TipoDeEspetaculo {
 			 }
 				 
 			if(duracao > duracaoMinimaParaAumentoDePreco){
-				precoIntermediario = precoIntermediario.add(precoIntermediario.multiply(BigDecimal.valueOf(fatorDeAjustePorDuracao)));
+				precoIntermediario = precoIntermediario.add(precoPadrao.multiply(BigDecimal.valueOf(fatorDeAjustePorDuracao)));
 			}
 			return precoIntermediario;
 		}
