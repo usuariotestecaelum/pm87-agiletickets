@@ -4,16 +4,23 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class SessaoTest {
-
 	@Test
-	public void deveVender1ingressoSeHa2vagas() throws Exception {
+	public void deveVenderMesmaQuantidadeVagas(){
 		Sessao sessao = new Sessao();
-        sessao.setTotalIngressos(2);
-
-        Assert.assertTrue(sessao.podeReservar(1));
+		sessao.setTotalIngressos(10);
+		
+		Assert.assertTrue(sessao.podeReservar(10));
+		
 	}
-	
-	
+		
+	@Test
+	public void deveVender5ingressosSeHa10vagas() throws Exception {
+		Sessao sessao = new Sessao();
+		sessao.setTotalIngressos(10);
+		
+		Assert.assertTrue(sessao.podeReservar(5));
+	}
+
 	@Test
 	public void naoDeveVender3ingressoSeHa2vagas() throws Exception {
 		Sessao sessao = new Sessao();
